@@ -42,8 +42,29 @@ func asterisks() {
 	}
 }
 
+/*
+
+Declare a variable a with the value 4. Using a nested for loop, prints the following result:
+1
+22
+333
+4444
+
+*/
+
+func recap() {
+	a := 4
+
+	for numRow := 1; numRow <= a; numRow++ {
+		for numColumn := 1; numColumn <= numRow; numColumn++ {
+			fmt.Print(numRow)
+		}
+		fmt.Print("\n")
+	}
+}
+
 func main() {
-	fmt.Print("\nChoose a number (1 ~ Multiplications, 2 ~ Draw Asterisks Triangle): ")
+	fmt.Print("\nChoose a number (1 ~ Multiplications, 2 ~ Draw Asterisks Triangle, 3 ~ Recap done): ")
 	fmt.Scanln(&option)
 
 	switch option {
@@ -51,5 +72,7 @@ func main() {
 		multiplication()
 	case 2:
 		asterisks()
+	case 3:
+		recap()
 	}
 }
